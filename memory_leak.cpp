@@ -1,5 +1,3 @@
-#include <cctype>
-#include <stdlib.h>
 #include <bits/stdc++.h>
 using namespace std;
 
