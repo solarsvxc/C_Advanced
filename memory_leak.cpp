@@ -1,7 +1,6 @@
 #include <cctype>
 #include <stdlib.h>
 #include <bits/stdc++.h>
-#include <new>
 using namespace std;
 
 // tran bo nho
