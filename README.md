@@ -1,1 +1,1 @@
-# CPro.K25
+# better than C
