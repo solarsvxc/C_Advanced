@@ -6,7 +6,7 @@ void stack_overflow(int count){
         stack_overflow(count + 1 ); 
 }
 
-void out_of_memory(){
+void out_of_memory(void){
         try {
         while (true) {
             int *bigArr = new int[1000000000]; 
@@ -16,7 +16,7 @@ void out_of_memory(){
     }
 }
 
-void memory_leak(){
+void memory_leak(void){
         int* arr = new int[5000];
 }
 
