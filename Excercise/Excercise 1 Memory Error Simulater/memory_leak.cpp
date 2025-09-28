@@ -1,4 +1,5 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <stdint.h>
 using namespace std;
 
 void stack_overflow(int count){
@@ -6,21 +7,21 @@ void stack_overflow(int count){
         stack_overflow(count + 1 ); 
 }
 
-void out_of_memory(){
+void out_of_memory(void){
         try {
-        while (true) {
-            int *bigArr = new int[1000000000]; 
-        }
+                while (true) {
+                      int *bigArr = new int[1000000000]; 
+                }
     } catch (bad_alloc &e) {
         cout << "Out of memory";
     }
 }
 
-void memory_leak(){
+void memory_leak(void){
         int* arr = new int[5000];
 }
 
-int main(){
+int main(void){
  cout << "./memory_lab stack_overflow"<<endl;
  cout << "./memory_lab out_of_memory"<<endl;
  cout << "./memory_lab memory_leak"<<endl;
@@ -28,7 +29,6 @@ int main(){
         
  string chose;
  cin >> chose;
-        
  for(auto& x: chose ){
         x = tolower(x);
  }
