@@ -22,9 +22,9 @@ void memory_leak(void){
 }
 
 int main(void){
- cout << "./memory_lab stack_overflow"<<endl;
- cout << "./memory_lab out_of_memory"<<endl;
- cout << "./memory_lab memory_leak"<<endl;
+ cout << "stack_overflow"<<endl;
+ cout << "out_of_memory"<<endl;
+ cout << "memory_leak"<<endl;
  cout << ("Chose error memory to demo(q to Quit): ");
         
  string chose;
@@ -38,13 +38,13 @@ int main(void){
         
         if(lower =="q"){
                 cout <<"Good bye"<<endl;
-        }else if(lower =="./memory_lab stack_overflow"){
+        }else if(lower =="stack_overflow"){
                 cout <<"Demo stack_overflow"<<endl;
                 stack_overflow(count);
-        }else if(lower=="./memory_lab out_of_memory"){
+        }else if(lower=="out_of_memory"){
                 cout <<"Demo out_of_memory"<<endl;
                 out_of_memory();
-        }else if(lower=="./memory_lab memory_leak"){
+        }else if(lower=="memory_leak"){
                 cout <<"Demo memory_leak"<<endl;
                 memory_leak();
         } 
