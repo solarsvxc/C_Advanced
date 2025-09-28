@@ -28,7 +28,6 @@ int main(){
         
  string chose;
  cin >> chose;
-        
  for(auto& x: chose ){
         x = tolower(x);
  }
