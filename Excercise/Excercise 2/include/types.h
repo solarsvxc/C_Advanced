@@ -1,13 +1,4 @@
-/**
- * @file types.h
- * @author duong nguyen nguyen (you@domain.com)
- * @brief 
- * @version 0.1
- * @date 2025-09-27
- * 
- * @copyright Copyright (c) 2025
- * 
- */
+
 #ifndef TYPES_H
 #define TYPES_H
 
@@ -21,7 +12,7 @@ typedef enum
 {
     MODE_AUTO,
     MODE_MANUAL,
-} system_mode;
+} system_mode_t;
 
 /**
  * @brief pump's state
@@ -31,7 +22,7 @@ typedef enum
 {
     PUMP_ON,
     PUMP_OFF,
-} pump_state;
+} pump_state_t;
 
 /**
  * @brief led's state
@@ -43,20 +34,20 @@ typedef enum
     LED_WATERING,
     LED_LOW_MOISTURE_ALERT,
     LED_ERROR,
-} led_state;
+} led_state_t;
 
 /**
- * @brief moisture in Percent and tempurature in Celcius
+ * @brief struct data of sensor
  * 
  */
 typedef struct 
 {
-    float soi_moisture_percent;
+    float soil_moisture_percent;
     float tempurature_c;
 } sensor_data;
 
 /**
- * @brief Data decide on operating mode for Pump, Sensor cycle
+ * @brief struct data for control pump, moisture at low and moisture at high
  * 
  */
 typedef struct 
@@ -66,7 +57,6 @@ typedef struct
     uint32_t watering_max_ms;
     uint32_t sensor_cycles_ms;
     uint32_t min_interval_between_watering_ms;
-    pump_state;
 } system_config;
 
 

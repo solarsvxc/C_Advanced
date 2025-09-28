@@ -1,11 +1,18 @@
-/**
- * @file config.h
- * @author duong nguyen nguyen (you@domain.com)
- * @brief 
- * @version 0.1
- * @date 2025-09-27
- * 
- * @copyright Copyright (c) 2025
- * 
- */
+#ifndef CONFIG_H
+#define CONFIG_H
+
+#include <stdint.h>
+
+#define DEFAULT_MOISTURE_LOW 30.0f
+#define DEFAULT_MOISTURE_HIGH 45.0f
+#define DEFAULT_WATERING_MAX_MS (30 * 1000) // 30s
+#define DEFAULT_SENSOR_CYCLE_MS (5 * 60 * 1000) // 5 minutes
+#define DEFAULT_MIN_INTERVAL_MS (10 * 60 * 1000) // 10 minutes
+
+/*<! Value for Simulate */
+#define SIMULATED_SENSOR_CYCLE_MS (5 * 1000) // 5s
+#define SIMULATED_MIN_INTERVAL_MS (15 * 1000) // 15s
+#define SIMULATED_WATERING_MAX_MS (10 * 1000) // 10s
+
+#endif // CONFIG_H
 
