@@ -30,3 +30,5 @@ Purpose: illustrate behavior, consequences, and debugging techniques for each ty
 
 ```bash
 g++ -std=c++17 -O2 -Wall -Wextra -o memory_lab memory_lab.cpp
+or
+g++ memory_lab.cpp -o memory_lab
