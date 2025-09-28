@@ -8,9 +8,9 @@ void stack_overflow(int count){
 
 void out_of_memory(void){
         try {
-        while (true) {
-            int *bigArr = new int[1000000000]; 
-        }
+                while (true) {
+                      int *bigArr = new int[1000000000]; 
+                }
     } catch (bad_alloc &e) {
         cout << "Out of memory";
     }
