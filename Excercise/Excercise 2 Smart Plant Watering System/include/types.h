@@ -37,14 +37,14 @@ typedef enum
 } led_state_t;
 
 /**
- * @brief struct data of sensor
+ * @brief struct to store data of moisture sensor, enviroment tempurature sensor.
  * 
  */
 typedef struct 
 {
     float soil_moisture_percent;
-    float tempurature_c;
-} sensor_data;
+    float env_tempurature_c;
+} sensor_data_t;
 
 /**
  * @brief struct data for control pump, moisture at low and moisture at high
@@ -57,7 +57,11 @@ typedef struct
     uint32_t watering_max_ms;
     uint32_t sensor_cycles_ms;
     uint32_t min_interval_between_watering_ms;
+    system_mode_t system_mode;
 } system_config;
+
+
+
 
 
 #endif // TYPES_H

@@ -3,17 +3,25 @@
 #include <time.h>
 #include "include/sensor.h"
 
-/*<! Take the average value of 4 four sensor measurement */
-#define MOISTURE_AVG_WINDOW 4
-
-static float moisture_buffer[MOISTURE_AVG_WINDOW];
-static int moisture_index   = 0;
-static int moisture_count   = 0;
-
-void sensor_init(void)
+void init_sensors(void)
 {
-    /*<! Random number from random seed   */
-    srand((unsigned)time(NULL));
+    /*Init sensors 
+    * Analog pin soil sensor
+    * Analog pin tempurature sensor
+    * 
+    * */
+}
+static float get_moisture_soil(void) 
+{
+    return SIMULATED_MOISTURE_SOIL / AVERAGE_DATA_MOISTURE;
+}
 
+static float get_enviroment_tempurature(void)
+{
+    return  SIMLUATED_ENVIROMENT_TEMPURATURE / AVERAGE_DATA_TEMPURATURE;
+}
 
+void read_sensors(sensor_data_t *sensor_data){
+    sensor_data->env_tempurature_c = get_enviroment_tempurature();
+    sensor_data->soil_moisture_percent = get_moisture_soil();
 }
