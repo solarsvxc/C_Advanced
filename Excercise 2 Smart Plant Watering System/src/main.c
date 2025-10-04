@@ -16,8 +16,9 @@ system_state_t      system_state;
 sensor_data_t       sensors_data;
 
 void delay_ms(uint32_t ms) {
-        for (int i = 0; i < ms; i++){}   
+        for (int i = 0; i < ms; i++){ /* DO NOTTHING */}   
 }
+
 void system_init(void)
 {
     button_init();
@@ -36,6 +37,7 @@ int main(int argc, int argv[])
     while (1)
     {   
         system_was_work_s += 1; 
+        
         /* Check current state button is pressed or not */
         if (button1_pressed())
         {
@@ -50,6 +52,7 @@ int main(int argc, int argv[])
         {
             sensors_data.env_tempurature_c  = enviroment_tempurature_get();
             sensors_data.soil_moisture_percent  = moisture_soil_get();
+
             printf("[SENSOR] Soil: %u%%, Temp: %.1fC\n",  sensors_data.soil_moisture_percent, sensors_data.env_tempurature_c);
             sensors_read_last = system_was_work_s;
         }
@@ -63,7 +66,8 @@ int main(int argc, int argv[])
         }
         
         led_state(system_state.led_state);
-        delay_ms(5000);
+        
+        delay_ms(1000);
     } 
 
 }

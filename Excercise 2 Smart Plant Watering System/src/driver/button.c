@@ -8,6 +8,12 @@ void button_init(void)
     printf("[BUTTON] Buttons initialized\n");
 }
 
+/**
+ * @brief check state of button is pressed ? if is pressed return true
+ * 
+ * @return true 
+ * @return false 
+ */
 bool button1_pressed(void)
 {
     btn1_event++;
@@ -21,6 +27,12 @@ bool button1_pressed(void)
         return false;
 }
 
+/**
+ * @brief check state of button is pressed ? if is pressed return true
+ * 
+ * @return true 
+ * @return false 
+ */
 bool button2_pressed(void)
 {
     btn2_event++;

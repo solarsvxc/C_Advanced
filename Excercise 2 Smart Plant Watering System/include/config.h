@@ -1,4 +1,3 @@
-
 #ifndef CONFIG_H
 #define CONFIG_H
 
@@ -10,18 +9,15 @@
 #define DEFAULT_SENSOR_CYCLE_MS (5 * 60 * 1000) // 5 minutes
 #define DEFAULT_MIN_INTERVAL_MS (10 * 60 * 1000) // 10 minutes
 
-#define SOIL_VALUE_INIT 0.0f
-#define TEMPURATURE_VALUE_INIT 0.0f
+#define SOIL_VALUE_INIT 23.0f
+#define TEMPURATURE_VALUE_INIT 30.0f
 
 /*<! Value for Simulate */
-
 #define SIMULATED_MOISTURE_SOIL  40.0f
 #define SIMLUATED_ENVIROMENT_TEMPURATURE 30.0f
 
 #define AVERAGE_DATA_MOISTURE 4
 #define AVERAGE_DATA_TEMPURATURE 4
-
-
 
 /**
  * @brief mode system

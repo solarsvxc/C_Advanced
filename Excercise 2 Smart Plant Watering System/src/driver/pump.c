@@ -8,13 +8,18 @@ void pump_init(void)
 }
 
 void pump_on(void) {
-    printf("[ACTUATOR] BOM BAT\n");
+    printf("[PUMP]: Pump ON\n");
 }
 
 void pump_off(void) {
-    printf("[ACTUATOR] BOM TAT\n");
+    printf("[PUMP]: Pump OFF\n");
 }
 
+/**
+ * @brief get state of led
+ * 
+ * @param state 
+ */
 void led_state (led_state_t state) {
     switch(state) {
         case LED_NORMAL:
