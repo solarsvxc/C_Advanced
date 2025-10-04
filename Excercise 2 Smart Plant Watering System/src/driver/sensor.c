@@ -3,7 +3,7 @@
 #include <time.h>
 #include "include/sensor.h"
 
-void init_sensors(void)
+void init_sensors(uint32_t pin)
 {
     /*Init sensors 
     * Analog pin soil sensor
@@ -11,8 +11,10 @@ void init_sensors(void)
     * 
     * */
 }
+
 static float get_moisture_soil(void) 
 {
+
     return SIMULATED_MOISTURE_SOIL / AVERAGE_DATA_MOISTURE;
 }
 
