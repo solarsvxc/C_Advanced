@@ -1,29 +1,17 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
-#include "include/sensor.h"
+#include "include/config.h"
 
-void init_sensors(uint32_t pin)
+void sensors_init(void)
 {
-    /*Init sensors 
-    * Analog pin soil sensor
-    * Analog pin tempurature sensor
-    * 
-    * */
+    printf("<! SENSORS INITIALIZED");
 }
 
-static float get_moisture_soil(void) 
+float moisture_soil_get(void) 
 {
-
     return SIMULATED_MOISTURE_SOIL / AVERAGE_DATA_MOISTURE;
 }
 
-static float get_enviroment_tempurature(void)
+float enviroment_tempurature_get(void)
 {
     return  SIMLUATED_ENVIROMENT_TEMPURATURE / AVERAGE_DATA_TEMPURATURE;
-}
-
-void read_sensors(sensor_data_t *sensor_data){
-    sensor_data->env_tempurature_c = get_enviroment_tempurature();
-    sensor_data->soil_moisture_percent = get_moisture_soil();
 }

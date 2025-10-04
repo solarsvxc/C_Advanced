@@ -2,10 +2,10 @@
 #ifndef SENSORS_H
 #define SENSORS_H
 
-#include "types.h"
 #include "include/config.h"
 
-void init_sensors(void);
-void read_sensors(sensor_data_t *sensor_data);
+void sensors_init(void);
+float moisture_soil_get(void);
+float enviroment_tempurature_get(void);
 
 #endif // SENSORS_H
