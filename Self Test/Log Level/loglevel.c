@@ -11,19 +11,6 @@ typedef enum {
 
 static log_level_t current_log = LOG_DEBUG;
 
-/**
- * @brief Sets the current log level for logging operations.
- *
- * This function updates the global log level to the specified value,
- * controlling the verbosity of log messages throughout the application.
- *
- * @param level The desired log level to set (of type log_level_t).
- */
-void set_log_level(log_level_t level)
-{
-    current_log = level;
-}
-
 void log_message(log_level_t level, const char *format, ...)
 {
     /**
@@ -58,7 +45,7 @@ void log_message(log_level_t level, const char *format, ...)
     char time_str[20];
     strftime(time_str,sizeof(time_str),"%Y-%m-%d %H:%M:%S",localtime(&now));
 
-    printf("[%s] Log: [%s] ", time_str, level_string[level]);
+    printf("[%s] Log: [%-7s] -> ", time_str, level_string[level]);
 
     /**
      * Initializes a variable argument list, prints a formatted string to stdout using the provided format and arguments,
@@ -76,7 +63,6 @@ void log_message(log_level_t level, const char *format, ...)
 
 int main(void)
 {
-    // set_log_level(LOG_DEBUG);
     log_message(LOG_DEBUG, "This is a debug message.");
     log_message(LOG_INFO, "Application started.");
     log_message(LOG_WARNING, "Low disk space.");
