@@ -1,0 +1,8 @@
+[2025-10-18 16:03:35] [EMERGENCY] [main.c:17] - Canh bao
+[2025-10-18 16:03:35] [ALERT    ] [main.c:18] - Canh bao
+[2025-10-18 16:03:35] [CRITICAL ] [main.c:19] - Canh bao
+[2025-10-18 16:03:35] [ERROR    ] [main.c:20] - Canh bao
+[2025-10-18 16:03:35] [WARNING  ] [main.c:21] - Canh bao
+[2025-10-18 16:03:35] [NOTICE   ] [main.c:22] - Canh bao
+[2025-10-18 16:03:35] [INFO     ] [main.c:23] - Canh bao
+[2025-10-18 16:03:35] [DEBUG    ] [main.c:24] - Canh bao
