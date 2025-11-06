@@ -8,7 +8,7 @@ int main(void)
     if (0 != logger_init(LOG_DEBUG,"app.txt"))
     {
         printf("Cant open log file");
-        return 1;
+        return -1;
     } else
     {
         /* DO NOTTHING */

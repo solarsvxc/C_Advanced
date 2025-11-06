@@ -10,7 +10,9 @@
  * Definitions
  ******************************************************************************/
 static log_level_t g_log_level = LOG_INFO;
+
 static  FILE* g_file  = NULL;
+
 static const char* g_level_names[] = { 
     "EMERGENCY",
     "ALERT",
@@ -100,16 +102,15 @@ void logger_log(log_level_t log_level, const char* file, int line,const char* me
     time_t curtime;
     time(&curtime);
     struct tm *local_time =  localtime(&curtime);
-    char time_buff[20];
-
+    
     /* format time to YYYY-MM-DD HH-MM-SS time: localtime, store it to a char array 20 byte */
+    char time_buff[20];
     strftime(time_buff,sizeof(time_buff),"%Y-%m-%d %H:%M:%S",local_time);
 
     char log_buff[2048];
     snprintf(log_buff,sizeof(log_buff),"[%s] [%-9s] [%s:%d] - %s", time_buff, g_level_names[log_level], file, line, message_buff);
 
     /* CONSOLE Print */
-
     if (LOG_ERROR >= log_level )
     {   
         fprintf(stderr,"%s\n", log_buff);
